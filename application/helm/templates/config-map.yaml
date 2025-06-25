@@ -2,6 +2,8 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: '{{ .Chart.Name }}-html'
+  annotations:
+    argocd.argoproj.io/sync-wave: '{{ .Values.argocd.syncwave.configmap }}'
 immutable: false
 data:
 {{ (.Files.Glob "html/*").AsConfig | indent 2 }}
