@@ -35,3 +35,5 @@ subcharts:
   - alias: deploy2
     service:
       port: 8080
+
+test: Healty
