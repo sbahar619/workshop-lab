@@ -36,4 +36,4 @@ subcharts:
     service:
       port: 8080
 
-test: xxxxxx
+test: Healthy
