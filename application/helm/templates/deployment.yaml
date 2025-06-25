@@ -13,6 +13,7 @@ spec:
         app: {{ .Chart.Name }}
       annotations:
         checksum/config: {{ include (print $.Template.BasePath "/config-map.yaml") . | sha256sum }}
+        argocd.argoproj.io/sync-wave: '{{ .Values.argocd.syncwave.deployment }}'
     spec:
       volumes:
         - name: index-html
